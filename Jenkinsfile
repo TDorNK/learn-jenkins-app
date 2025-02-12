@@ -59,11 +59,7 @@ pipeline {
             }
         }
 
-        post {
-            always {
-                junit 'jest-results/junit.xml'
-            }
-        }
+        
 
         // stage('Deploy') {
         //     agent {
@@ -82,4 +78,9 @@ pipeline {
         // }
     }
 
+    post {
+        always {
+            junit 'jest-results/junit.xml'
+        }
+    }
 }
